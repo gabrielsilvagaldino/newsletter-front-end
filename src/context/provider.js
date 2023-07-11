@@ -4,7 +4,7 @@ import { useMemo, useState, useCallback } from 'react';
 
 function Provider({ children }) {
   const [email, setEmail] = useState('')
-  const [validEmail, setValidOrNot] = useState(true)
+  const [validEmail, setValidOrNot] = useState()
 
   const emailOnChange = useCallback((event) => {
     setEmail(event.target.value)
