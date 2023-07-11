@@ -13,7 +13,7 @@ function Homepage() {
           <li>And much more!</li>
         </ul>
         <Input/>
-        <Button name='aaaaaaa'/>
+        <Button name='Subscribe for monthly newsletter'/>
       </div>
       <div>
         <img src="/assets/images/illustration-sign-up-desktop.svg" alt="illustration" />

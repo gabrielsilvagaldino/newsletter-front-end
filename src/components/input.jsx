@@ -6,7 +6,7 @@ function Input() {
 
   return (
     <label htmlFor="input">
-      <span>texto</span>
+      <span>Email address</span>
       <input type="email" id="input" onChange={ obj.emailOnChange }/>
     </label>
   )
