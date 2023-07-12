@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Context from './context/index';
 import Homepage from "./pages/homepage";
 import Success from "./pages/success";
+import './styles/homepage.css'
 
 function App() {
   const obj = useContext(Context)
