@@ -6,8 +6,10 @@ function Input() {
 
   return (
     <label htmlFor="input">
-      <span>Email address</span>
-      <input type="email" id="input" onChange={ obj.emailOnChange }/>
+      <span id="email-label">Email address</span>
+      { obj.validEmail === false ? <span id="error-label">Valid email required</span> : null }
+      <br/>
+      <input type="email" placeholder="email@company.com" id={obj.input} onChange={ obj.emailOnChange }/>
     </label>
   )
 }

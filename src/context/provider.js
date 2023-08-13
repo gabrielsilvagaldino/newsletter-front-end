@@ -4,6 +4,7 @@ import { useMemo, useState, useCallback } from 'react';
 
 function Provider({ children }) {
   const [email, setEmail] = useState('')
+  const [input, setInput] = useState('input')
   const [validEmail, setValidOrNot] = useState()
 
   const emailOnChange = useCallback((event) => {
@@ -13,6 +14,7 @@ function Provider({ children }) {
   const buttonOnClick = useCallback(() => {
     const regex = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})$/;
     if (!regex.test(email)) {
+      setInput('input-error')
       setValidOrNot(false)
     } else {
       setValidOrNot(true)
@@ -20,11 +22,13 @@ function Provider({ children }) {
   }, [email])
 
   const result = useMemo(() => ({
+    input,
     email,
     validEmail,
     emailOnChange,
     buttonOnClick
   }), [
+    input,
     email,
     validEmail,
     emailOnChange,
